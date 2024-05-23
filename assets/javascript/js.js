@@ -18,5 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
 // #region search
 
 //#endregion search
+// #region FOOTER DROP DOWN
+// Add this to your js.js file
 
+document.addEventListener("DOMContentLoaded", () => {
+    const accordions = document.querySelectorAll('.itemFlex');
+    
+    accordions.forEach(accordion => {
+        accordion.addEventListener('click', () => {
+            const isOpen = accordion.nextElementSibling.classList.contains('show');
+
+            // Update all contents visibility
+            if (isOpen) {
+                document.querySelectorAll('.item-content.show').forEach(content => {
+                    content.classList.remove('show');
+                });
+                document.querySelectorAll('.itemFlex img').forEach(icon => {
+                    icon.src = "assets/images/plus-large-svgrepo-com.svg"; 
+                });
+            } else {
+                document.querySelectorAll('.item-content').forEach(content => {
+                    content.classList.add('show');
+                });
+                document.querySelectorAll('.itemFlex img').forEach(icon => {
+                    icon.src = "assets/images/minus-svgrepo-com.svg";
+                });
+            }
+        });
+    });
+});
+//#endregion FOOTER DROP DOWN
 
