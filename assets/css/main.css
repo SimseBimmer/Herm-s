@@ -1,6 +1,278 @@
 /* CSS */
-@import url();
-@import url();
-html{
+/* #region */
+/*Simple*/
+@import url(https://db.onlinewebfonts.com/c/c5bd605b45237a12c99133fa9d7cae49?family=Helvetica+W01+Roman);
+/* font-family: "Helvetica W01 Roman"; */
+/*Pro*/
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* font-family: "Courier Prime", monospace;*/
+
+/* guld */
+/*#E4C0A1*/
+/* sort */
+/*#444*/
+
+
+
+html {
     scroll-behavior: smooth;
 }
+
+body {
+    background-color: #F6F1EB;
+    overflow-x: hidden;
+}
+
+/* #endregion */
+/* #region veryTop-Navigation*/
+.veryTop-Navigation {
+    display: flex;
+    justify-content: right;
+}
+
+.veryTop-Navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.veryTop-Navigation ul li {
+    margin: 0 .8rem;
+}
+
+.veryTop-Navigation ul li a {
+    color: #444;
+    font-family: "Helvetica W01 Roman";
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.veryTop-Navigation ul li a:hover {
+    border-bottom: 1px solid #E4C0A1;
+}
+
+/* #endregion veryTop-Navigation*/
+/* #region fixed-Navigation*/
+.fixed-Navigation {
+    font-family: "Helvetica W01 Roman";
+    position: relative;
+    background-color: #F6F1EB;
+    margin: auto;
+    justify-content: space-between;
+
+    display: flex;
+    width: 100%;
+    padding: .4rem 1rem 0 1rem;
+    transition: top 0.3s;
+}
+
+.fixed-Navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+.fixed-Navigation ul li a {
+    position: relative;
+    top: .6px;
+    margin: 0 .5rem;
+    color: #444;
+    text-decoration: none;
+    padding: 2px;
+    border-bottom: 0 solid #E4C0A1;
+}
+
+.fixed-Navigation ul li a:hover {
+    border-bottom: 1px solid #E4C0A1;
+}
+
+.fixed-Navigation ul:last-of-type {
+    margin-right: 1.3rem;
+}
+
+.fixed-Navigation ul li input {
+    position: relative;
+    left: 2rem;
+    bottom: 6px;
+
+
+    width: 140px;
+    height: 30px;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #444;
+    outline: none;
+}
+
+.fixed-Navigation ul li input::placeholder {
+    color: #444;
+    margin-left: 2rem;
+    text-indent: 1.1rem;
+}
+
+.fixed-Navigation ul li input:active {
+    outline: none;
+}
+
+.fixed-Navigation ul li input:focus {
+    border: 1px solid #E4C0A1;
+    text-indent: 1.1rem;
+    overflow: hidden;
+}
+
+#searchInput::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+
+#searchBarImage {
+    width: .7rem;
+    position: absolute;
+    left: 8.4rem;
+    bottom: 2rem;
+}
+
+
+.fixed-Navigation ul li img {
+    width: 1.2rem;
+    margin: 0 4rem 0 0;
+}
+
+.fixed-Navigation ul li:nth-last-child(2) img {
+    margin-left: .8rem;
+}
+
+.fixed-navigation_image img {
+    width: 5.5rem;
+}
+
+
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* #endregion fixed-Navigation*/
+/* #region HEADER */
+.headerBigImg {
+    /* border: 1px solid red; */
+    padding-top: 60px;
+    background-color: #F6F1EB;
+}
+
+.headerBigImg img {
+    width: 100%;
+}
+
+/* #endregion HEADER */
+/* #region TameYourLook */
+.TameYourLook{
+    height: 18rem;
+    margin: auto;
+    margin-top: 7%;
+    width: 750px;
+    text-align: center;
+    color: #444;
+}
+.TameYourLook h1{
+    font-family: "Helvetica W01 Roman";
+    text-transform: uppercase;
+    word-spacing: 1rem;
+    font-weight: 100;
+    font-size: 2rem;
+}
+.TameYourLook h1 span{
+    font-size: 2.3rem;
+}
+
+.TameYourLook p, .TameYourLook a{
+    font-family: 'Courier New', Courier, monospace;
+    color: #444;
+    text-decoration: none;
+    border: none;
+    margin: 0 0 1.5rem 0;
+}
+.TameYourLook a{
+    border-bottom: 1px solid #444;
+}
+.TameYourLook a:hover{
+    border-bottom: 1px solid #E4C0A1;
+}
+/* #endregion TameYourLook */
+/* #region PAGES */
+.grid-containerOne{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1200px;
+    margin: auto;
+    gap: 2.5%;
+}
+.grid-containerOne div{
+    font-family: "Helvetica W01 Roman";
+    font-size: .5rem;
+    word-spacing: .5rem;
+    letter-spacing: 1px;
+}
+.grid-containerOne div h2{
+    text-align: start;
+    color: #444;
+}
+.grid-containerOne div p{
+    font-size: .8rem;
+    color: #444;
+}
+.grid-containerOne div img{
+    width: 100%;
+}
+.grid-containerOne div img{
+    transition: 400ms ease;
+    background-color: red;
+    cursor: pointer;
+}
+.grid-containerOne div img:hover{
+    opacity: .5;
+}
+#gridcontainerTwo{
+    margin-top: 10rem;
+}
+#products{
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+}
+
+
+
+
+
+/* #endregion PAGES */
+.spacer p{
+    color: transparent;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Helvetica W01 Roman";
+}
+
+/* #region FOOTER */
+.topTopList{
+    display: flex;
+    justify-content: center; 
+}
+.topList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.griddi div{
+    display: flex;
+}
+.griddi img{
+    width: 1rem;
+    position: relative;
+    bottom: 1px;
+    opacity: .6;
+    margin-left: 2px;
+}
+/* #endregion FOOTER */
