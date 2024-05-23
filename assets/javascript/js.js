@@ -34,14 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     content.classList.remove('show');
                 });
                 document.querySelectorAll('.itemFlex img').forEach(icon => {
-                    icon.src = "assets/images/plus-large-svgrepo-com.svg"; 
+                    icon.src = "assets/images/Icons/plus_icon.svg"; 
                 });
             } else {
                 document.querySelectorAll('.item-content').forEach(content => {
                     content.classList.add('show');
                 });
                 document.querySelectorAll('.itemFlex img').forEach(icon => {
-                    icon.src = "assets/images/minus-svgrepo-com.svg";
+                    icon.src = "assets/images/Icons/minus_icon.svg";
                 });
             }
         });
