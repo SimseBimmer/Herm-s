@@ -13,12 +13,6 @@
 /* sort */
 /*#444*/
 
-
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: #F6F1EB;
     overflow-x: hidden;
@@ -155,6 +149,7 @@ body {
 .fixed {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1000;
 }
 
@@ -276,13 +271,9 @@ body {
     background-color: #fff;
     margin: 0;
     padding: 1.5rem 1rem;
-}
-
-.topList {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
-
 }
 
 .list-items {
@@ -493,10 +484,13 @@ span {
     margin: 0 0 0 5px;
 }
 
-.footerFooter{
+.footerFooter {
     background-color: #fff;
     height: 7.5rem;
+    margin-top: .2rem;
+    width: 100%;
 }
+
 .rights p {
     float: right;
     color: #444;
@@ -508,4 +502,88 @@ span {
     font-size: 5;
 }
 
+.footerGrid,
+.footerFooter {
+    width: 100%;
+}
+
 /* #endregion FOOTER */
+/* #region MEDIA */
+@media (max-width: 1300px) {
+    .grid-containerOne {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        gap: 1.5rem;
+    }
+
+    #scarves {
+        padding: 5rem 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1155px) {
+    .soMe {
+        width: 150px;
+    }
+}
+
+@media (max-width: 770px) {
+    .topList {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .list-items {
+        margin: .2rem;
+        border-bottom: .2rem solid #F6F1EB;
+        width: 100%;
+    }
+
+    .list-items:last-of-type {
+        border: none;
+    }
+
+    .footerGrid {
+        height: 11rem;
+    }
+
+    .soMe {
+        width: 100px;
+    }
+}
+
+
+
+
+
+/* #endregion MEDIA */
+/* #region SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E4C0A1;
+    /* Color of the scrollbar thumb */
+    border-radius: 1000px;
+    /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e4c0a1a9;
+    /* Color when hovering over the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* Color of the scrollbar track */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* #endregion SCROLLBAR */
